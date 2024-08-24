@@ -1,8 +1,11 @@
 import mongoose from "mongoose";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 export const connectDB = async () => {
   try {
-    await mongoose.connect("mongodb+srv://duttapritom777:VEU4ZBWdol1SrDhx@cluster0.b8uuj.mongodb.net/blog-app");
+    await mongoose.connect(process.env.MONGODB_URI);
     console.log("MongoDB connected...");
   } catch (err) {
     console.error(err.message);
@@ -10,5 +13,3 @@ export const connectDB = async () => {
   }
 };
 
-// mongodb+srv://duttapritom777:VEU4ZBWdol1SrDhx@cluster0.b8uuj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
-// pass - VEU4ZBWdol1SrDhx
