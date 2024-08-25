@@ -61,7 +61,7 @@ const registerUser = async (req, res) => {
     }
 
     // hashing/encryption user password
-    const salt = await bcrypt.genSalt(10); //higher no -> strongest encryption
+    const salt = await bcrypt.genSalt(10); 
     const hashedPassword = await bcrypt.hash(password, salt);
 
     const newUser = new userModel({

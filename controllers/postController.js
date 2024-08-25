@@ -1,8 +1,6 @@
 import Post from "../models/Post.js";
-import fs from "fs";
 
-// @desc    Get all posts
-// @route   GET /posts
+// Get all posts
 const getPosts = async (req, res) => {
   try {
     const posts = await Post.find();
@@ -12,8 +10,8 @@ const getPosts = async (req, res) => {
   }
 };
 
-// @desc    Get a single post by ID
-// @route   GET /posts/:id
+// Get a single post by ID
+// GET /posts/:id
 const getPostById = async (req, res) => {
   try {
     const post = await Post.findById(req.params.id);
@@ -26,8 +24,8 @@ const getPostById = async (req, res) => {
   }
 };
 
-// @desc    Create a new post
-// @route   POST /posts
+// Create a new post
+// POST /posts
 const createPost = async (req, res) => {
   try {
     const post = new Post({
@@ -43,8 +41,8 @@ const createPost = async (req, res) => {
   }
 };
 
-// @desc    Update a post
-// @route   PUT /posts/:id
+// Update a post
+// PUT /posts/:id
 const updatePost = async (req, res) => {
   try {
     const post = await Post.findById(req.params.id);
@@ -61,8 +59,8 @@ const updatePost = async (req, res) => {
   }
 };
 
-// @desc    Delete a post
-// @route   DELETE /posts/:id
+// Delete a post
+// DELETE /posts/:id
 const deletePost = async (req, res) => {
   try {
     const post = await Post.findById(req.params.id);
