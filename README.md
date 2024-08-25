@@ -1,4 +1,4 @@
-**Blog Application API**
+**Blog Application API - Backend**
 
 This is a simple RESTful API for a Blog application built with Node.js, Express, MongoDB, and Mongoose.
 
