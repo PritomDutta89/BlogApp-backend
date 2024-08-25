@@ -153,3 +153,20 @@ password: String (required, minimum 8 characters)
 **200 OK**: Post successfully deleted.
 
 **404 Not Found:** Post does not exist.
+
+**Setup:**
+
+1. First clone this repo
+   
+2. npm install
+  
+3. Create a .env file in the root directory:
+
+     MONGODB_URI:...
+
+     JWT_SECRET:...
+
+4. npm start
+
+
+**Frontend Repo - https://github.com/PritomDutta89/BlogApp-Frontend**
